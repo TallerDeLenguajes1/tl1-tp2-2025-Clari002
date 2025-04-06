@@ -15,12 +15,13 @@ struct compu
 //funciones
 void cargarDatos(struct compu pc[], int cantidad);
 void listarPCs(struct compu pcs[], int cantidad);
-
+void mostrarMasVieja(struct compu pcs[], int cantidad);
 int main()
 {
     struct compu pc[N];
     cargarDatos(pc, N);
     listarPCs(pc,N);
+    mostrarMasVieja(pc, N);
 
     return 0;
 }
@@ -49,4 +50,21 @@ void listarPCs(struct compu pcs[], int cantidad)
         printf("Tipo de CPU: %s\n\n", pcs[i].tipo_cpu);
     }
     
+}
+
+void mostrarMasVieja(struct compu pcs[], int cantidad)
+{
+    int p=0;
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (pcs[i].anio < pcs[p].anio)
+        {
+            p=i;
+        }  
+    }
+    printf("\n--------- PC (%d) es la mas vieja ----------\n",p+1);
+    printf("Velocidad: %d \n", pcs[p].velocidad);
+    printf("Anio: %d\n", pcs[p].anio);
+    printf("Cantidad de nucleos: %d\n", pcs[p].cantidad_nucleos);
+    printf("Tipo de CPU: %s\n\n", pcs[p].tipo_cpu);
 }
