@@ -1,3 +1,8 @@
 2f. ¿Puede ver el archivo tp2_1_2.c? ¿Por qué?
 No puedo verlo, ya que esta en la otra rama Opcion_2
 
+Despues de hacer commit Respuestas.txt, observo el historial de commit
+y commo la rama principal se divide,una rama main y la otra Opcion_2
+
+Despues de realizar el merge, noto que la rama Opcion_2 se combina con 
+la rama main
